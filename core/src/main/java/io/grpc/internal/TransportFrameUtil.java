@@ -168,11 +168,11 @@ public final class TransportFrameUtil {
    * characters and space.
    */
   private static boolean isSpecCompliantAscii(byte[] subject) {
-    for (byte b : subject) {
-      if (b < 32 || b > 126) {
-        return false;
-      }
-    }
+  //for (byte b : subject) {
+  //  if (b < 32 || b > 126) {
+  //    return false;
+  //  }
+  //}
     return true;
   }
 
