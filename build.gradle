@@ -383,7 +383,7 @@ subprojects {
             repositories {
                 maven {
                     name = "GitHubPackages"
-                    url = uri("https://maven.pkg.github.com/contaquanto/logpose")
+                    url = uri("https://maven.pkg.github.com/contaquanto/grpc-java")
                     credentials {
                         // The credentials
                         username = System.getenv("GITHUB_ACTOR")
