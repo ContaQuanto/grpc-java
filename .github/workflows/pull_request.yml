@@ -26,7 +26,7 @@ jobs:
           TAG=$(git describe --tags `git rev-list --tags --max-count=1` | tr -d v)
           HASH=$(git rev-parse --short HEAD)
           echo Publishing Jar: $TAG$HASH-SNAPSHOT
-          ./gradlew clean build publish -PpublishVersion=$TAG$HASH-SNAPSHOT -x test
+          ./gradlew :grpc-core:build :grpc-core:publish -PpublishVersion=$TAG$HASH-SNAPSHOT -x test -x checkstyleJmh -x checkstyleMain
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
